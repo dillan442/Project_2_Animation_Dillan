@@ -7,7 +7,7 @@
   <body>
     <svg width=100% viewbox="0 0 400 400">
       <!-- Rear Head Circle -->
-      <ellipse cy="160" cx="200" rx="83" ry="110"/>
+      <ellipse cy="160" cx="200" rx="83" ry="117"/>
       <!-- Main Mouth Circle -->
       <circle cy="200" cx="200" r="80" fill="#703c29"/>
       <!-- Tongue -->
@@ -27,14 +27,25 @@
         <circle cx="230" cy="205" r="4"/>
         <circle cx="250" cy="205" r="4"/>
         <!-- Eyes -->
-        <ellipse cx="169" cy="100" rx="10" ry="13" fill="white"/>
-        <ellipse cx="230" cy="100" rx="10" ry="13" fill="white"/>
-        <ellipse cx="169" cy="100" rx="7" ry="8" fill="black"/>
-        <ellipse cx="230" cy="100" rx="7" ry="8" fill="black"/>
+        <ellipse cx="169" cy="105" rx="10" ry="13" fill="white"/>
+        <ellipse cx="230" cy="105" rx="10" ry="13" fill="white"/>
+        <ellipse cx="169" cy="105" rx="7" ry="8" fill="black"/>
+        <ellipse cx="230" cy="105" rx="7" ry="8" fill="black"/>
         <!-- Eyelid -->
-        <rect x="158" y="58" width="50" height="30"  fill="black">
-          <animate attributeName= "y" from="68" to="87" dur="3s"
-          repeatcount="indefinite"
+        <rect x="158" y="58" width="85" height="30"  fill="black">
+          <animate attributeName= "y" from="58" to="89" dur="0.5s"
+          repeatcount="indefinite"/>
+        </rect>
+        <!-- Tongue in/out -->
+          <rect x="193" y="259" width="15" height="16" fill="#703c29">
+            <animate id="tongue1" attributeName= "y" from="259" to="233" dur="1.4s"
+            begin="mouseover" fill="freeze"/>
+            <animate id="tongue2" attributeName="y" from="233" to="259"
+            begin="tongue1.end" fill="freeze" dur="1.4s"/>
+          </rect>
+
+
+
 
 
 
