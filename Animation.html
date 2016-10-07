@@ -29,20 +29,38 @@
         <!-- Eyes -->
         <ellipse cx="169" cy="105" rx="10" ry="13" fill="white"/>
         <ellipse cx="230" cy="105" rx="10" ry="13" fill="white"/>
-        <ellipse cx="169" cy="105" rx="7" ry="8" fill="black"/>
-        <ellipse cx="230" cy="105" rx="7" ry="8" fill="black"/>
+        <ellipse cx="169" cy="105" rx="7" ry="8" fill="black">
+          <animate id="1move"   attributeName="cx" from="169" to="172"
+          dur="0.5s" begin="0s;2move.end"  fill="freeze"  />
+          <animate id="2move" attributeName="cx" from="172"to="169"
+      dur="0.5s" begin="1move.end" fill="freeze" />
+    </ellipse>
+        <ellipse cx="230" cy="105" rx="7" ry="8" fill="black">
+          <animate id="eyemove1"  attributeName="cx" from="230" to="233" dur="0.5s"
+          begin="mouseover"/>
+          <animate id="eyemove2" attributeName="cx" from="233" to="230"
+          begin="eyemove1.end" dur="0.5s"/>
+        </ellipse>
         <!-- Eyelid -->
         <rect x="158" y="58" width="85" height="30"  fill="black">
-          <animate attributeName= "y" from="58" to="89" dur="0.5s"
+          <animate attributeName= "y" from="58" to="89" dur="1s"
           repeatcount="indefinite"/>
         </rect>
         <!-- Tongue in/out -->
-          <rect x="193" y="259" width="15" height="16" fill="#703c29">
+          <rect x="192" y="259" width="16" height="16" fill="#703c29">
             <animate id="tongue1" attributeName= "y" from="259" to="233" dur="1.4s"
-            begin="mouseover" fill="freeze"/>
+            begin="mouseover" fill="freeze" dur="0.4s"  />
             <animate id="tongue2" attributeName="y" from="233" to="259"
-            begin="tongue1.end" fill="freeze" dur="1.4s"/>
+            begin="tongue1.end" fill="freeze" dur="0.4s"/>
           </rect>
+          <!-- Ears -->
+          <ellipse cx="150" cy="56" rx="80" ry="14" fill="black"/>
+          <ellipse cx="250" cy="56" rx="80" ry="14"/>
+          <!-- Text -->
+          <text x="70" y="320" font-size="30" fill="white"> The Vicious Rottweiler</text>
+
+
+
 
 
 
